@@ -19,17 +19,17 @@ public class FuturesAndCallables {
     
     public static void main(String[] args) {
         ExecutorService threadPool = Executors.newFixedThreadPool(NTHREADS);
-        List<Future<Long>> taskList = new ArrayList<>();
+        List<Future<Long>> resultList = new ArrayList<>();
         
         for(int i = 0; i < 500; i ++){
             Callable<Long> task = new CountUntilCallable(1000_000L + i);
             Future<Long> submit = threadPool.submit(task);
-            taskList.add(submit);
+            resultList.add(submit);
         }
         
         long sum = 0;
         
-        for(Future<Long> result: taskList){
+        for(Future<Long> result: resultList){
             try {
                 sum += result.get();
             } catch (InterruptedException | ExecutionException ex) {
