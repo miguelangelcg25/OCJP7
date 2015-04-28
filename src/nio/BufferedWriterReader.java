@@ -74,6 +74,7 @@ public class BufferedWriterReader {
         }
         
         //rename a file, it's the same for directories
+        System.out.println();
         String oldName = file.getName();
         File newFileName = new File(subDirectories, "anotherFileName.txt");
         file.renameTo(newFileName);
