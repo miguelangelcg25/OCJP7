@@ -34,13 +34,17 @@ public class FileWriterReaderExample {
 
         try (FileWriter out = new FileWriter(anotherFile);
              FileReader in = new FileReader(anotherFile)) {
+            
+            //FileWriter line break must be manually specified
             out.write("howdy\nfolks!\n");
-            out.flush();        
+            out.flush();  
+            //out.close();  try catch wit resources closes it automatically
             
             char buffer[] = new char[50];
             int size = in.read(buffer);            
             System.out.println(size + " characters readed");
             
+            //Read char by char
             for (char c : buffer) {
                 System.out.print(c);
             }            
