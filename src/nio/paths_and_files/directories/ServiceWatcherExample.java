@@ -12,7 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * Watchs a directory for changes delete/create/modify
+ * Watch a directory for changes delete/create/modify
  * @author miguelangel
  */
 public class ServiceWatcherExample {
