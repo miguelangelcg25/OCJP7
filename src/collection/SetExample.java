@@ -12,7 +12,7 @@ import bean.Dog;
 public class SetExample {
 
 	public static void main(String... args) {
-		// ramdon order, no duplicates allowed
+		// random order, no duplicates allowed
 		Set<Dog> hashSet = new HashSet<>();
 		hashSet.add(new Dog("Canela"));
 		hashSet.add(new Dog("Nicky"));
@@ -35,8 +35,8 @@ public class SetExample {
 		Comparator<Dog> comparator = new Comparator<Dog>() {
 			@Override
 			public int compare(Dog o1, Dog o2) {
-				return o2.getName().compareTo(o1.getName());
-				// return o1.getAge() - o2.getAge();
+				// return o2.getName().compareTo(o1.getName());
+				return o1.getAge() - o2.getAge();
 			}
 		};
 
@@ -48,7 +48,6 @@ public class SetExample {
 		treeSet.add(new Dog("Canela"));
 		treeSet.add(new Dog("Nicky"));
 		treeSet.add(new Dog("Runy"));
-		treeSet.add(new Dog("Niko"));
 		treeSet.add(new Dog("Niko"));
 		treeSet.add(new Dog("Niko"));
 		System.out.println(treeSet);

@@ -7,6 +7,10 @@ public class Person implements Comparable<Person> {
 	private String name;
 	private Date birthDate;
 	
+	public Person(String name){
+		this.name = name;
+	}
+	
 	public Person(String name, Date birthDate){
 		this.name = name;
 		this.birthDate = birthDate;
