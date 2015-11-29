@@ -38,7 +38,7 @@ public class ArraysCollectionsExample {
 		
 		Integer[] integerArray = new Integer[list.size()];
 		integerArray = list.toArray(new Integer[0]);
-		System.out.println("\nas integer array = " + objectArray.length);
+		System.out.println("\nas integer array = " + integerArray.length);
 		
 	}
 
